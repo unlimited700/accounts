@@ -114,6 +114,11 @@ public class UserServiceImpl implements UserService {
 		response.setToken(token);
 		response.setUserName(userLoginRequest.getUserName());
 		response.setUserId(user.getId());
+		response.setName(user.getName());
+		response.setPhone(user.getPhone());
+		response.setAge(user.getAge());
+		response.setSex(user.getSex());
+		response.setCreatedAt(user.getCreatedAt());
 
 		return response;
 	}
