@@ -8,6 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.apnavaidya.treasure.accounts.Enum.UserStatus;
+import com.apnavaidya.treasure.accounts.dto.Response;
 import com.apnavaidya.treasure.accounts.dto.UserLoginRequest;
 import com.apnavaidya.treasure.accounts.dto.UserLoginResponse;
 import com.apnavaidya.treasure.accounts.dto.UserSignUpRequest;
@@ -41,7 +44,7 @@ public class UserServiceImpl implements UserService {
 		LOG.info("checking the user account exist for email:{0}", userSignUpRequest.getEmail());
 
 		User user = null;
-		user = userDao.findByEmail(userSignUpRequest.getEmail());
+		user = userDao.findByEmailAndStatus(userSignUpRequest.getEmail(), UserStatus.VERIFIED);
 
 		if (null != user) {
 			response.setMessage("User already exist in system");
@@ -90,9 +93,9 @@ public class UserServiceImpl implements UserService {
 			return response;
 		}
 		LOG.info("getting the user account for userName:{0}", userLoginRequest.getUserName());
-		User user = userDao.findByEmail(userLoginRequest.getUserName());
+		User user = userDao.findByEmailAndStatus(userLoginRequest.getUserName(), UserStatus.VERIFIED);
 		if (user == null) {
-			response.setMessage("Account of User does not exist");
+			response.setMessage("Account of User does not exist or not yet VERIFIED");
 			response.setResponseCode(511);
 			return response;
 		}
@@ -140,4 +143,5 @@ public class UserServiceImpl implements UserService {
 		}
 		return user.getToken();
 	}
+
 }

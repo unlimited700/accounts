@@ -1,5 +1,7 @@
 com/apnavaidya/treasure/accounts/dto/UserLoginResponse.class
 com/apnavaidya/treasure/accounts/dto/UserSignUpRequest.class
+com/apnavaidya/treasure/accounts/dto/UserUpdateRequest.class
+com/apnavaidya/treasure/accounts/Enum/UserStatus.class
 com/apnavaidya/treasure/accounts/model/User.class
 com/apnavaidya/treasure/dao/UserDao.class
 com/apnavaidya/treasure/accounts/dto/Request.class
@@ -9,5 +11,6 @@ com/apnavaidya/treasure/accounts/v1/service/UserServiceImpl.class
 com/apnavaidya/treasure/accounts/v1/service/DateTimeService.class
 com/apnavaidya/treasure/accounts/dto/UserSignUpResponse.class
 com/apnavaidya/treasure/accounts/v1/service/DateTimeServiceImpl.class
+com/apnavaidya/treasure/accounts/dto/UserVerifyRequest.class
 com/apnavaidya/treasure/accounts/v1/service/UserService.class
 com/apnavaidya/treasure/http/HttpClientConfig.class

@@ -5,9 +5,12 @@
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/v1/service/UserServiceImpl.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/dto/Request.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/dto/UserLoginRequest.java
+/home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/Enum/UserStatus.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/dto/UserLoginResponse.java
+/home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/dto/UserUpdateRequest.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/v1/service/UserService.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/dao/UserDao.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/http/HttpClientConfig.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/dto/UserSignUpRequest.java
 /home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/v1/service/DateTimeServiceImpl.java
+/home/pradeep/apnavaidyaWorkspace/accounts/src/main/java/com/apnavaidya/treasure/accounts/dto/UserVerifyRequest.java

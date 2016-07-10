@@ -4,10 +4,14 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.apnavaidya.treasure.accounts.Enum.UserStatus;
 
 @Entity
 @Table(name = "user")
@@ -43,6 +47,10 @@ public class User {
 
 	@Column(name = "updated_at", columnDefinition = "timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
 	private String updatedAt;
+
+	@Column(name = "status")
+	@Enumerated(EnumType.STRING)
+	private UserStatus status;
 
 	public Long getId() {
 		return id;
@@ -122,6 +130,14 @@ public class User {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public UserStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(UserStatus status) {
+		this.status = status;
 	}
 
 }
