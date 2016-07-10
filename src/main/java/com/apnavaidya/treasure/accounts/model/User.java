@@ -50,7 +50,7 @@ public class User {
 
 	@Column(name = "status")
 	@Enumerated(EnumType.STRING)
-	private UserStatus status;
+	private UserStatus status = UserStatus.UNVERIFIED;
 
 	public Long getId() {
 		return id;
