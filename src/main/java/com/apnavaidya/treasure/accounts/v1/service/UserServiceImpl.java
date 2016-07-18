@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService {
 			response.setResponseCode(511);
 			return response;
 		}
-		LOG.info("Checking the user passord for userName:{0}", userLoginRequest.getUserName());
+		LOG.info("Checking the user passord for userName:{}", userLoginRequest.getUserName());
 		if (!user.getPassword().equals(userLoginRequest.getPassword())) {
 			response.setMessage("Invalid Password");
 			response.setResponseCode(512);
@@ -108,7 +108,7 @@ public class UserServiceImpl implements UserService {
 
 		String token = user.getToken();
 		if (token == null) {
-			LOG.info("Generating the user token for userName:{0}", userLoginRequest.getUserName());
+			LOG.info("Generating the user token for userName:{}", userLoginRequest.getUserName());
 			token = generatedLoginToken(userLoginRequest.getUserName());
 			user.setToken(token);
 			userDao.save(user);
@@ -138,7 +138,7 @@ public class UserServiceImpl implements UserService {
 			user = userDao.findOne(userId);
 		}
 		if (user == null) {
-			LOG.error("User does not exist for userId:{0}", userId);
+			LOG.error("User does not exist for userId:{}", userId);
 			return null;
 		}
 		return user.getToken();
